@@ -20,10 +20,15 @@ public class Main {
             driver.findElement(By.id("accept-cookies")).click();
             Thread.sleep(500);
             WebElement login = driver.findElement(By.id("login"));
-            login.sendKeys("login");
+            login.sendKeys("mojlogin");
             WebElement pass = driver.findElement(By.id("heslo"));
-            pass.sendKeys("password");
+            pass.sendKeys("mojeheslo");
             pass.submit();
+
+            Thread.sleep(2000);
+
+            WebElement rozvrh = driver.findElement(By.xpath("/html/body/app-root/div/div[1]/div[3]/app-body/div[1]/div/app-rozvrh/div/div/button/span[5]"));
+            rozvrh.click();
 
             Thread.sleep(2000);
 
